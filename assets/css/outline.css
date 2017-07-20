@@ -164,10 +164,6 @@
   h3 {
     page-break-after: avoid; } }
 
-@-ms-viewport {
-  width: device-width;
-  zoom: 1.0; }
-
 @viewport {
   width: device-width;
   zoom: 1.0; }
@@ -207,9 +203,7 @@ body {
 
 html {
   background: #fff;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-          text-size-adjust: 100%; }
+  text-size-adjust: 100%; }
 
 audio,
 canvas,
@@ -288,11 +282,16 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
+@font-face {
+  font-family: 'ApercuRegular';
+  src: url("/assets/fonts/apercu_regular.eot");
+  src: url("/assets/fonts/apercu_regular.eot") format("embedded-opentype"), url("/assets/fonts/apercu_regular.woff") format("woff"), url("/assets/fonts/apercu_regular.ttf") format("truetype"), url("/assets/fonts/apercu_regular.svg#ApercuRegular") format("svg"); }
+
 html {
   font-size: 100%; }
 
 body {
-  font-family: "Merriweather", serif;
+  font-family: 'ApercuRegular';
   font-size: 1rem;
   line-height: 1.5;
   color: #333; }
@@ -381,9 +380,7 @@ blockquote cite {
 .hyphenate {
   overflow-wrap: break-word;
   word-wrap: break-word;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto; }
+  hyphens: auto; }
 
 strong {
   font-weight: bold; }
@@ -397,11 +394,11 @@ var {
 a {
   text-decoration: none;
   word-wrap: break-word;
-  color: #38a1d6; }
+  color: white; }
 
 a:hover {
-  text-decoration: underline;
-  color: #2a79a1; }
+  text-decoration: none;
+  color: white; }
 
 a img {
   border: none;
@@ -464,10 +461,6 @@ figcaption {
   text-align: center;
   border-bottom: 0.0625rem solid #dce8ef; }
 
-::-moz-selection {
-  color: #fff;
-  background: #38a1d6; }
-
 ::selection {
   color: #fff;
   background: #38a1d6; }
@@ -477,26 +470,21 @@ figcaption {
   margin-left: auto;
   margin-right: auto;
   height: 100%;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
+  flex-direction: column;
+  justify-content: space-between; }
   .container:after {
     content: " ";
     display: block;
     clear: both; }
 
 #header {
-  -ms-flex-positive: 1;
-      flex-grow: 1;
+  flex-grow: 1;
   max-width: 62em; }
 
 #footer {
   padding-top: 1em;
-  max-width: 58em;
-  border-top: 1px solid white; }
+  max-width: 58em; }
 
 #footer img {
   max-width: 20em; }
@@ -507,6 +495,10 @@ figcaption {
 
 body {
   background: black; }
+
+hr {
+  background-color: transparent;
+  border-top: 1px solid white; }
 
 button,
 .btn,
@@ -617,8 +609,7 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
   overflow: auto;
-  -moz-tab-size: 2;
-       tab-size: 2; }
+  tab-size: 2; }
 
 code {
   padding: .25rem;

@@ -6,12 +6,21 @@
 // Docs - http://outlinecss.co.uk/get-started.html#typography
 //---------------------------------------------//
 
+@font-face {
+    font-family: 'ApercuRegular';
+    src: url('/assets/fonts/apercu_regular.eot');
+    src: url('/assets/fonts/apercu_regular.eot') format('embedded-opentype'),
+         url('/assets/fonts/apercu_regular.woff') format('woff'),
+         url('/assets/fonts/apercu_regular.ttf') format('truetype'),
+         url('/assets/fonts/apercu_regular.svg#ApercuRegular') format('svg');
+}
+
 html {
   font-size: $html-font-base;
 }
 
 body {
-  font-family: $font-primary;
+  font-family: 'ApercuRegular';
   font-size: $font-base;
   line-height: 1.5;
   color: $color-grey-dark;
@@ -23,6 +32,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: $font-secondary;
   font-weight: normal;
 }
+
 
 h1,
 .h1,
@@ -145,12 +155,12 @@ var {
 a {
   text-decoration: none;
   word-wrap: break-word;
-  color: $color-primary;
+  color: white;
 }
 
 a:hover {
-  text-decoration: underline;
-  color: shade($color-primary, 25%);
+  text-decoration: none;
+  color: white;
 }
 
 a img {
